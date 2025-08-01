@@ -1,0 +1,34 @@
+<mxfile host="65bd71144e">
+    <diagram id="dParQ9o0GckHHbSc1_CF" name="Page-1">
+        <mxGraphModel dx="832" dy="487" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="none" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="3" value="Build the model" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="280" y="360" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Train the model" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=0;" vertex="1" parent="1">
+                    <mxGeometry x="280" y="440" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="Epoch 1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+                    <mxGeometry x="305" y="500" width="70" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="Epoch 2" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+                    <mxGeometry x="305" y="540" width="70" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="Epoch 2" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+                    <mxGeometry x="305" y="580" width="70" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="Epoch 15" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+                    <mxGeometry x="305" y="640" width="70" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="Prepare the dataset" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="280" y="280" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="Input query" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+                    <mxGeometry x="280" y="700" width="120" height="40" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

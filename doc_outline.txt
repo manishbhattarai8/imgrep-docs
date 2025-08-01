@@ -1,0 +1,44 @@
+Tech Stack: 
+Frontend: Flutter, SQF lite
+Backend: Python (Flask)
+Database: Faiss, postgres
+Models: Pytorch, ResNet, CNN
+“Pretrained Models” ..
+
+
+
+Planning and analysis 
+-	 how object recognition works, embeddings, natural language processing, feasibility
+Research and Learning
+-	Clip, datasets and captioning, existing AI models, custom models, easy ocr, tesseract, faiss, duckling
+Development
+//Everything 
+Testing and Debugging
+-	Running(training) the model,  testing with queries, more training, more testing with queries (figure)
+Documentation
+-	Documentation
+
+
+Related Works:
+Samsung Gallery 
+Google Photos
+
+
+Diagrams:
+Frontend Flow
+Backend Flow
+Model Flow -test design
+CNN
+
+
+Graphs:
+Loss over epochs
+Accuracy on each epoch training – visual 
+
+
+Advantages over existing:
+-	Sentence level query searching
+-	Facial, ocr, object recognition combined into one (hybrid model)
+
+Limitations
+-	Model need to be run locally on local server
