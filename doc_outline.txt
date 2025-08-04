@@ -1,7 +1,7 @@
 Tech Stack: 
 Frontend: Flutter, SQF lite
 Backend: Python (Flask)
-Database: Faiss, postgres
+Database: Faiss, postgres(neon)
 Models: Pytorch, ResNet, CNN
 “Pretrained Models” ..
 
@@ -42,3 +42,169 @@ Advantages over existing:
 
 Limitations
 -	Model need to be run locally on local server
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Objectives of the Application
+The primary objectives of the application are as follows:
+
+To synchronize images from the device’s gallery into the application for analysis and indexing.
+
+To perform object recognition on the synced images using a deep learning model based on ResNet, enabling detection and tagging of visual content.
+
+To implement Optical Character Recognition (OCR) for detecting and extracting textual content from images to support search functionality.
+
+To enable query-based image retrieval by matching user-entered search terms against both recognized objects and extracted text.
+
+Motivation and Significance
+With the growing volume of images stored on personal devices, the need for intelligent and efficient methods of organizing and retrieving visual 
+information has become increasingly important. Users often find it difficult to locate specific images based solely on memory or manual browsing, 
+especially when the gallery contains hundreds or thousands of photos. Traditional gallery applications offer limited support for content-based 
+search, relying mostly on metadata such as date, location, or user-created albums. This limitation motivates the development of an application 
+that can provide deeper, semantic-level image understanding and search.
+
+The core motivation behind this project is to bridge that gap by enabling users to perform query-based searches across their gallery using both 
+object recognition and optical character recognition (OCR). By recognizing the content of images—whether it is an object like a “laptop” or text 
+such as a “receipt”—the application enhances usability and accessibility. This is particularly useful in educational, organizational, and archival 
+contexts, where users frequently need to retrieve images based on specific visual elements or embedded text.
+
+The significance of this work lies in its integration of deep learning technologies—such as CNNs and ResNet—into a user-friendly mobile 
+application. The system’s ability to recognize and index both objects and text empowers users with a more intelligent image retrieval system 
+compared to conventional tools. Moreover, by using technologies like Flutter for cross-platform development and Faiss for fast vector search, the 
+application remains efficient, scalable, and suitable for real-world deployment.
+
+This project demonstrates the practical application of machine learning and mobile development in solving everyday user problems. It also provides 
+a foundation for future extensions, such as face recognition, emotion tagging, or integration with cloud-based workflows, highlighting its 
+potential academic and commercial impact.
+
+
+Expected Outcomes
+The development and deployment of the proposed image recognition and search application are expected to yield several key outcomes:
+
+Efficient Image Synchronization: The application will successfully retrieve and store images from the device’s gallery, maintaining local or 
+cloud-based access for further processing.
+
+Accurate Object Recognition: Through the use of deep learning models such as ResNet, the system is expected to accurately identify and classify 
+common objects present in user images, enabling content-aware search functionality.
+
+Effective Text Detection via OCR: The Optical Character Recognition (OCR) module will extract readable text from images with a high degree of 
+accuracy, supporting text-based queries for document scanning, signage recognition, or general image-text retrieval.
+
+Responsive Query-Based Search: Users will be able to input keywords or phrases, and the system will return relevant images by matching the query 
+against recognized objects and extracted text, significantly reducing the time and effort needed to locate specific images.
+
+User-Friendly Mobile Interface: The Flutter-based interface is expected to provide a smooth, intuitive user experience with cross-platform 
+compatibility, making the application accessible on both Android and iOS devices.
+
+Scalable and Efficient Backend Processing: The Python (Flask) backend, integrated with Faiss and PostgreSQL (Neon), will enable fast, scalable, 
+and reliable image indexing and retrieval, supporting real-time interactions without compromising performance.
+
+Overall, the application aims to deliver a practical, intelligent solution for managing and searching personal image collections, demonstrating 
+the effectiveness of combining machine learning with mobile development for real-world tasks.
+
+
+
+Technology Stack
+The application is built using a combination of mobile and backend technologies to support image synchronization, processing, and intelligent 
+search. The major components of the tech stack are as follows:
+
+Frontend
+Flutter: Flutter is an open-source UI toolkit developed by Google for building natively compiled applications from a single codebase. It was used 
+to develop the mobile interface of the application, offering cross-platform support, responsive design, and smooth user experience.
+
+SQFlite: SQFlite is a Flutter plugin that provides an interface for using SQLite, a lightweight, embedded SQL database. It is used in the 
+application for local storage, caching of images, metadata, and quick retrieval of user-specific data offline.
+
+Backend
+Python (Flask): The backend is developed using Flask, a micro web framework in Python. Flask handles API requests from the mobile app, processes 
+image data, communicates with the database, and performs tasks such as object recognition and text matching. It provides a lightweight and 
+flexible environment for integrating machine learning models and serving responses efficiently.
+
+Database
+Faiss: Faiss (Facebook AI Similarity Search) is a library developed by Facebook AI Research for efficient similarity search and clustering of 
+dense vectors. In the application, Faiss is used to index image and text embeddings, enabling fast and accurate retrieval of images based on 
+content similarity.
+
+PostgreSQL (Neon): PostgreSQL is a powerful, open-source relational database system. Neon is a serverless and cloud-native implementation of 
+PostgreSQL that allows scalable and fast storage without managing infrastructure. It is used to store structured data such as user information, 
+image metadata, and search logs.
+
+Machine Learning Models
+PyTorch: PyTorch is an open-source deep learning framework widely used for research and production. It is used in the backend for model 
+development and inference tasks related to image and text recognition.
+
+ResNet: ResNet (Residual Network) is a deep convolutional neural network architecture known for its skip connections and ability to train very 
+deep models without degradation. It is used in the application for object recognition within images.
+
+Convolutional Neural Networks (CNNs): CNNs are a class of deep neural networks particularly effective in image processing tasks. They are used in 
+the OCR pipeline of the application to detect and extract text from images.
+
+
+ResNet
+
+ResNet (Residual Neural Network) is a deep learning architecture introduced by He et al. in 2015, which won the ImageNet Large Scale Visual
+ Recognition Challenge (ILSVRC) that year. It marked a major breakthrough in training very deep convolutional neural networks (CNNs).
+
+Traditional CNNs suffer from a problem called the vanishing gradient, where gradients become too small to effectively update weights in early
+ layers as networks get deeper. This leads to degradation of performance, even when more layers are added.
+
+To overcome this, ResNet introduced the concept of residual learning. Instead of each layer learning a direct mapping, ResNet allows layers to 
+learn the residual (or difference) between the input and the output. This is done using skip connections, which bypass one or more layers and
+ directly add the input of a block to its output. Mathematically, if the input is x and the block learns a function F(x), then the output becomes 
+ F(x) + x.
+
+These skip connections help:
+
+-Mitigate the vanishing gradient problem
+
+-Improve training speed and accuracy
+
+-Enable the construction of very deep networks (e.g., ResNet-50, ResNet-101, ResNet-152)
+
+ResNet has become a foundational architecture in computer vision tasks such as image classification, object detection, and segmentation. 
+Its success lies in the fact that it allows deep models to converge more easily and achieve better generalization on complex datasets.
+
+
+
+Convolutional Neural Networks (CNNs)
+Convolutional Neural Networks (CNNs) are a class of deep learning models that are especially well-suited for processing image data. They have
+become fundamental in computer vision due to their ability to automatically and efficiently learn hierarchical features from visual inputs
+(LeCun, Bengio, & Hinton, 2015). Unlike traditional neural networks, CNNs leverage the spatial structure of images using convolutional layers
+with learnable filters that detect local patterns such as edges, corners, and textures. These patterns are then combined across multiple layers 
+to identify higher-level features, such as shapes, objects, or text regions.
+
+A standard CNN architecture includes convolutional layers, activation functions like ReLU to introduce non-linearity, pooling layers for spatial
+downsampling, and fully connected layers for output classification. This combination allows CNNs to generalize well across a wide variety of
+image recognition tasks, even when inputs vary in lighting, orientation, or background.
+
+CNNs have proven highly effective in tasks like image classification, object detection, facial recognition, and particularly in optical character
+recognition (OCR). OCR involves detecting and decoding characters from images, often in complex real-world conditions such as handwriting, low 
+lighting, or cluttered backgrounds. CNNs are capable of extracting relevant features from these challenging inputs, making them well-suited 
+for OCR systems. In our application, CNNs are used as part of the pipeline to recognize and extract textual information from synced images. By 
+learning spatial features associated with letters and digits, the CNN enables accurate identification of characters even in noisy or varied
+visual contexts.
+
+
+
+Similar applications
+
+Google Photos
+Google Photos is a cloud-based photo management and storage application developed by Google. It leverages powerful machine learning and computer
+vision techniques to automatically analyze and categorize images. The app can recognize faces, objects, scenes, landmarks, and even text using
+OCR, allowing users to search their image library using natural language queries (Google, n.d.). For instance, entering terms like “dog,”
+“birthday,” or “Eiffel Tower” returns relevant photos without manual tagging. Google Photos also supports automatic album creation, facial 
+clustering, timeline-based browsing, and intelligent suggestions. Its cloud integration allows users to back up and sync photos across devices 
+seamlessly. The combination of storage, organization, and intelligent search makes it one of the most comprehensive photo management tools
+currently available.
+
+Samsung Gallery
+Samsung Gallery is the default photo viewing and management application pre-installed on Samsung devices. While it focuses primarily on local
+photo organization, recent versions of the app incorporate AI-based features for automatic content recognition and categorization. Samsung 
+Gallery can identify various elements in images, such as food, landscapes, people, pets, and documents, and automatically group them into
+categories for easier browsing (Samsung, n.d.). It offers features such as face recognition, timeline view, tagging, and integration with
+Samsung Cloud and Microsoft OneDrive for cloud backup. The app emphasizes privacy and on-device processing, allowing image recognition 
+features to work without needing an internet connection. Its seamless integration with the Samsung ecosystem makes it a popular choice among 
+Galaxy users.
+
+
